@@ -5,7 +5,6 @@ import { createRouteHandlerClient } from '@supabase/auth-helpers-nextjs'
 export const dynamic = 'force-dynamic'
 
 export async function GET (request: NextRequest) {
-  'use server'
   const requestUrl = new URL(request.url)
   const code = requestUrl.searchParams.get('code')
 
